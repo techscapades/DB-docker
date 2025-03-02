@@ -10,7 +10,7 @@ On Linux host:
 3. docker run -t -d --name DB --network host -v /home/$USER/DB_setup.sh:/DB_setup.sh ubuntu
 4. docker exec -it DB bash -c "chmod +x /DB_setup.sh && /DB_setup.sh"
 
-Steps 4 is interactive, please setup the DB passwords by yourself, make sure to set up dbconfiguration for apache2.
+Steps 4 is interactive, please setup the DB passwords by yourself, make sure to set up the phpmyadmin webserver for apache2.
 
 To start the DB container and run services:
 1. docker start DB && docker exec -it DB bash -c "chmod +x /start_services.sh && /start_services.sh"
