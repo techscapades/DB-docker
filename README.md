@@ -9,6 +9,7 @@ On Linux host:
 2. wget -O /home/$USER/DB_setup.sh https://raw.githubusercontent.com/techscapades/DB-docker/main/DB_setup.sh
 3. docker run -t -d --name DB --network host -v /home/$USER/DB_setup.sh:/DB_setup.sh ubuntu
 4. docker exec -it DB bash -c "chmod +x /DB_setup.sh && /DB_setup.sh"
+5. I recommend you exiting and stopping the container, then using the docker start command below
 
 Steps 4 is interactive, please setup the DB passwords by yourself, make sure to set up the phpmyadmin webserver for apache2.
 
