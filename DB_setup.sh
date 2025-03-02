@@ -93,8 +93,9 @@ chmod +x "$SCRIPT_PATH"
 echo "use: bash start_services.sh to start DB services"
 
 echo -e "\\n"
-echo "Setup complete, stopping apache2 and mysqld services, SSH still active, please wait....!"
+echo "Setup complete, apache2, mysqld and SSH still active, exiting, please wait....!"
 hostname -I
+echo "Navigate to \$(hostname -I | awk '{print \$1}'):17701/phpmyadmin on browser to access"
 #pkill apache2 &
 #killall -9 mysqld &
 
